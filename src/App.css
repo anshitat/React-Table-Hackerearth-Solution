@@ -1,38 +1,292 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background-color: rgb(241, 245, 247);
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
-  flex-direction: column;
+}
+
+/* RIGHT SECTION */
+.Select{
+  position: relative;
+  min-width: 280px;
+  height: 100vh;
+  background-color: #EBF0F2;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+
+/* SEARCH SECTION */
+.top-section{
+  height: 80px;
+  margin: 20px 0 0 10px;
+  padding : 10px
+}
+.SearchSection{
+  position: relative;
+}
+.fa-search{
+  position: absolute;
+  top: 26px;
+  font-size: 12px;
+}
+.input-search{
+  font-size: 12px;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ddd;
+  margin : 20px 0 20px 0;
+  padding : 5px 20px
+}
+table {
+  font-family: 'Lato', sans-serif;
+  width: 1000px;
+  font-size: 9px;
+  font-weight: 600;
+  margin-left: 30px;
+  border-collapse: collapse;
+  text-align: center;
+  letter-spacing: 1px;
+}
+table td {
+  padding: 7px;
+  font-weight: 900;
+  color: #000;
+}
+table  tbody tr{
+  border-bottom: 1px solid #ddd;
+}
+table tr:hover {
+  background-color: #EBF0F2;
+  cursor: pointer;
+}
+table th{
+  text-transform: uppercase;
+  padding: 5px 0 5px 0;
+  text-align: center;
+  background-color: #EBF0F2;
+  border: 4px solid rgb(241, 245, 247);
+  border-radius: 10px;
+}
+table th:nth-child(2), table td:nth-child(2){
+  text-align: left;
+  padding : 10px;
+}
+table th:nth-child(2), table td:nth-child(2),
+table th:nth-child(5), table td:nth-child(5),
+table th:nth-child(6), table td:nth-child(6),
+table th:nth-child(8), table td:nth-child(8){
+  text-shadow: 0.5px 0.5px black;
+}
+.pagination-div{
+  position: sticky;
+  display:  flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 10px 10px 10px 35px;
+}
+.pagination-div button{
+  border: none;
+  outline: none;
+  padding : 4px;
+  color: #2510D7;
+  background-color: #EBF0F2;
+  cursor: pointer;
+}
+.pagination-div span{
+  font-size: 10px;
+  margin : 0 7px;
+}
+.pagination-div p{
+  font-size: 13px;
+}
+.Scroll-Selected{
+  width: 250px;
+  height: 340px;
+  margin: 170px 15px;
+  border-top: 2px solid #2510D7;
+  overflow-y: scroll;
+}
+.Scroll-Selected::-webkit-scrollbar {
+  width: 8px;
+}
+
+.Scroll-Selected::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3); 
+  border-radius: 10px;
+}
+
+.Scroll-Selected::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 4px rgba(46, 45, 45, 0.5); 
+}
+.Player{
+  display: flex;
+  justify-content: space-around;
+  text-shadow: 0.5px 0.5px black;
+  font-size: 10px;
+  margin: 10px 0;
+  letter-spacing: 0.5px;
+}
+.Player img{
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+}
+.Player .name-div p{
+  text-align: left;
+  margin-bottom: 5px;
+  margin-left: -30px;
+}
+.Player span{
+  margin-top: 10px;
+}
+.start-btn{
+  background-color: #2510D7;
+  color: #fff;
+  border: none;
+  outline : none;
+  cursor : pointer;
+  padding : 10px 50px;
+  text-transform : uppercase;
+  letter-spacing: 3px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.start-btn:hover{
+  background-color: #5041d8;
+}
+.game-board{
+  position: relative;;
+  width: 70%;
+  height: 100vh;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.player-card{
+    position: relative;
+    width : 110px;
+    height: 140px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 8PX;
+    font-size: 12px;
+    overflow: hidden;
+}
+.player-card.status{
+    border : 1px solid gray;
+}
+.player-card.win{
+    border : 1px solid rgb(6, 161, 6);
+    transform: scale(1.2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.player-card.loss{
+    border : 1px solid red;
+}
+.player-card::after{
+    position: absolute;
+    content: '';
+    color: #fff;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 25px;
+    border-radius: 10px;
+}
+.player-card.status::after{
+    background-color: grey;
+}
+.player-card.win::after{
+    background-color: rgb(6, 161, 6);
+}
+.player-card.loss::after{
+    background-color: red;
+}
+.player-card div{
+    display: flex;
+}
+.player-card img{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px;
+}
+.player-card p{
+    margin: 10px 7px;
+    font-weight: 600;
+    color: grey;
+}
+.player-card  p.player-name{
+    color:  #000;   
+}
+.status-bar{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    text-transform: uppercase;
+    bottom: 0;
+    font-size: 10px;
+    color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.toss-div{
+    position: absolute;
+    box-sizing: border-box;
+    background-color: rgb(119, 86, 37);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 10px solid rgb(73, 55, 27);
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.back-btn{
+    position: absolute;
+    right: -100px;
+    bottom: 50px;
+    background-color: saddlebrown;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    box-shadow: 2px 3px 2px rgba(0,0,0,0.3);
+    cursor: pointer;
+    font-size: 14px;
+}
+.back-btn:hover{
+    background-color: rgb(158, 81, 25);
+}
+.notify-div{
+  width: 150px;
+  height: 60px;
+  position: absolute;
+  background-color: navajowhite;
+  color: #2510D7;
+  top: 0;
+  left: 0;
 }

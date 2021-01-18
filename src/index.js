@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import GameScreen from './components/GameScreen'
 import reportWebVitals from './reportWebVitals';
+import { Route, Link, Switch , BrowserRouter as Router} from 'react-router-dom'
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <>
+        <Router>
+          <Switch>
+            <Route exact path ="/" component={App}></Route>
+            <Route  path ="/GameScreen" component={GameScreen}></Route>
+          </Switch>
+        </Router>
+    </>,
   document.getElementById('root')
 );
 
