@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/React-Table-Hackerearth-Solution/static/css/main.24f9542d.chunk.css",
+    "main.js": "/React-Table-Hackerearth-Solution/static/js/main.c61abd96.chunk.js",
+    "main.js.map": "/React-Table-Hackerearth-Solution/static/js/main.c61abd96.chunk.js.map",
+    "runtime-main.js": "/React-Table-Hackerearth-Solution/static/js/runtime-main.64572400.js",
+    "runtime-main.js.map": "/React-Table-Hackerearth-Solution/static/js/runtime-main.64572400.js.map",
+    "static/css/2.83342f34.chunk.css": "/React-Table-Hackerearth-Solution/static/css/2.83342f34.chunk.css",
+    "static/js/2.aa13d1cb.chunk.js": "/React-Table-Hackerearth-Solution/static/js/2.aa13d1cb.chunk.js",
+    "static/js/2.aa13d1cb.chunk.js.map": "/React-Table-Hackerearth-Solution/static/js/2.aa13d1cb.chunk.js.map",
+    "static/js/3.fb6ca8ec.chunk.js": "/React-Table-Hackerearth-Solution/static/js/3.fb6ca8ec.chunk.js",
+    "static/js/3.fb6ca8ec.chunk.js.map": "/React-Table-Hackerearth-Solution/static/js/3.fb6ca8ec.chunk.js.map",
+    "index.html": "/React-Table-Hackerearth-Solution/index.html",
+    "static/css/2.83342f34.chunk.css.map": "/React-Table-Hackerearth-Solution/static/css/2.83342f34.chunk.css.map",
+    "static/css/main.24f9542d.chunk.css.map": "/React-Table-Hackerearth-Solution/static/css/main.24f9542d.chunk.css.map",
+    "static/js/2.aa13d1cb.chunk.js.LICENSE.txt": "/React-Table-Hackerearth-Solution/static/js/2.aa13d1cb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.64572400.js",
+    "static/css/2.83342f34.chunk.css",
+    "static/js/2.aa13d1cb.chunk.js",
+    "static/css/main.24f9542d.chunk.css",
+    "static/js/main.c61abd96.chunk.js"
+  ]
+}
